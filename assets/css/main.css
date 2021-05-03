@@ -2750,7 +2750,7 @@
 
 		.wrapper.style3 {
 			background-attachment: fixed;
-			background-image: url("images/overlay.png"), url("../../images/banner.png");
+			background-image: url("images/overlay.png"), url("../../paper/banner.png");
 			background-position: center center;
 			background-size: cover;
 		}
@@ -3105,7 +3105,7 @@
 	#banner {
 		padding: 8em 0 8em 0;
 		background-attachment: fixed;
-		background-image: url("images/overlay.png"), url("../../images/banner.png");
+		background-image: url("images/overlay.png"), url("../../paper/banner.png");
 		background-position: center top;
 		background-size: cover;
 		line-height: 1.75;
@@ -3311,7 +3311,19 @@
     position: relative;
     width: 100%;
     height: 0;
-    padding-bottom: 75.00%;
+    padding-bottom: 10.00%;
+}
+.videocontainer42ar {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 40.50%;
+}
+.videocontainer60ar {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 15.50%;
 }
 .videothing {
     position: absolute;
