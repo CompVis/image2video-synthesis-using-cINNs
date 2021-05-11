@@ -150,14 +150,14 @@ python data/landscape/rename_images.py --data_dir <DATADIR>
 In `data/landscape` we provide a list of videos that were used for training and testing. Please [cite](https://dblp.org/rec/conf/cvpr/XiongL00L18.html?view=bibtex) the corresponding [paper](https://arxiv.org/abs/1709.07592) if you use the data.
 
 ### iPER
-Download the dataset from [here]() (coming soon) and run
+Download the dataset from [here](https://svip-lab.github.io/dataset/iPER_dataset.html)  and run
 ```bash
 python data/iPER/extract_iPER.py --raw_dir <DATADIR> --processed_dir <TARGETDIR>
 ```
 to extract the frames. In `data/iPER` we provide a list of videos that were used for train, eval, and test. Please [cite](https://dblp.org/rec/conf/iccv/LiuPML0G19.html?view=bibtex) the corresponding [paper](https://arxiv.org/abs/1909.12224) if you use the data. 
 
 ### Dynamic Textures
-Download the corrsponding dataset from [here](https://drive.google.com/drive/folders/1A450yR0_m3ZqyYkuA_ZHAtEW-zWI5Cib?usp=sharing) and unzip it. Please [cite](https://dblp.org/rec/conf/eccv/HadjiW18.html?view=bibtex) the corresponding [paper](https://openaccess.thecvf.com/content_ECCV_2018/papers/Isma_Hadji_A_New_Large_ECCV_2018_paper.pdf) if you use the data. The original mp4 files from DTDB can be downloaded from [here](http://www.cse.yorku.ca/~hadjisma/dtdb_website/dtdb.html).
+Download the corrsponding dataset from [here]()(coming soon) and unzip it. Please [cite](https://dblp.org/rec/conf/eccv/HadjiW18.html?view=bibtex) the corresponding [paper](https://openaccess.thecvf.com/content_ECCV_2018/papers/Isma_Hadji_A_New_Large_ECCV_2018_paper.pdf) if you use the data. The original mp4 files from DTDB can be downloaded from [here](http://www.cse.yorku.ca/~hadjisma/dtdb_website/dtdb.html).
  
 ## Evaluation <a name="evaluation"></a>
 After storing the data as described, the evaluation script for each dataset can be used. 
