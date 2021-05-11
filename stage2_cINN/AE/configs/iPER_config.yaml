@@ -1,0 +1,48 @@
+AE:
+  deterministic: False
+  in_size: 64
+  norm: "in"
+  encoder_type: "resnet50"
+  use_actnorm_in_dec: False
+  z_dim: 128
+
+Discriminator_Patch:
+  in_channels: 3
+  ndf: 64
+  n_layers: 3
+  use_actnorm: True
+  spectral_norm: True
+
+Training:
+  w_kl: 1e-5
+  n_epochs: 140
+  lr: 2e-4
+  bs: 30
+  weight_decay: 0
+  workers: 30
+  pretrain: 20
+  savename: 'INSERT_NAME_HERE'
+  save_path: 'INSERT_PATH_HERE'
+
+Data:
+  sequence_length: 1
+  img_size: 64
+  dataset: 'iPER'
+  test_size: 1000
+  iter_train: 100
+  iter_eval: 15
+  aug: True
+  data_path: 'INSERT_DATA_PATH_HERE'
+  Augmentation:
+    brightness: 0.1
+    contrast: 0.1
+    saturation: 0.2
+    hue: 0
+    prob_hflip: 0.5
+
+Logging:
+  entity: 'INSERT_WANDB_NAME'
+  project: "INSERT_PROJECT_NAME"
+  mode: 'online'
+
+

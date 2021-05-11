@@ -1,0 +1,78 @@
+Decoder:
+  channel_factor: 64
+  z_dim: 64
+  upsample_s: [2, 1]
+  upsample_t: [2, 1]
+  spectral_norm: True
+
+Encoder:
+  res_type_encoder: 'resnet18'
+  deterministic: false
+  use_max_pool: false
+  z_dim: 64
+  channels: [64, 128, 256, 512, 512]
+  stride_t: [1, 2, 2, 2]
+  stride_s: [1, 2, 2, 2]
+
+Discriminator_Temporal:
+  eval_seq_length: 16
+  res_type_encoder: 'resnet18'
+  deterministic: false
+  use_max_pool: true
+  channels: [64, 64, 128, 256, 512]
+  stride_t: [2, 2, 2, 2]
+  stride_s: [1, 1, 2, 2]
+  spectral_norm: True
+
+Discriminator_Patch:
+  in_channels: 3
+  ndf: 64
+  n_layers: 3
+  use_actnorm: True
+  spectral_norm: True
+
+Training:
+  patch_GAN: 'basic'
+  GAN_Loss: 'hinge'
+  w_coup_s: 1
+  w_coup_t: 1
+  w_fmap_t: 10
+  w_percep: 40
+  w_recon: 10
+  w_GP: 10
+  w_kl: 1e-4
+  subsample_length: 12
+  pretrain: 1
+  n_epochs: 100
+  lr: 2e-4
+  workers: 20
+  bs: 10
+  bs_eval: 10
+  verbose_idx: 30
+  weight_decay: 1e-5
+  lr_gamma: 0.98
+  FVD: 'FVD'
+  savename: 'INSERT_NAME_HERE'
+  save_path: 'INSERT_PATH_HERE'
+  reload_path: ''
+
+Data:
+  sequence_length: 17
+  img_size: 64
+  dataset: 'iPER'
+  test_size: 1000
+  iter_train: 60
+  iter_eval: 15
+  aug: True
+  data_path: 'INSERT_DATA_PATH_HERE'
+  Augmentation:
+    brightness: 0.2
+    contrast: 0.2
+    saturation: 0.2
+    hue: 0
+    prob_hflip: 0.5
+
+Logging:
+  entity: 'INSERT_WANDB_NAME'
+  project: "INSERT_PROJECT_NAME"
+  mode: 'online'

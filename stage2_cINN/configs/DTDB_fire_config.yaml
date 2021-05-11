@@ -1,0 +1,55 @@
+Flow:
+  n_flows: 20
+  flow_hidden_depth: 2
+  flow_mid_channels_factor: 8
+
+Conditioning_Model:
+  z_dim: 128
+  checkpoint_name: 'Encoder_stage2'
+  model_name: 'save_name_AE_conditioning/'
+  model_path: 'path_AE_conditioning'
+
+First_stage_model:
+  checkpoint_encoder: 'best_PFVD_ENC'
+  checkpoint_decoder: 'best_PFVD_GEN'
+  model_name: 'save_name_stage1/'
+  model_path: 'path_stage1'
+
+Training:
+  n_epochs: 31
+  lr: 1e-5
+  workers: 12
+  bs: 50
+  bs_eval: 10
+  verbose_idx: 30
+  weight_decay: 0
+  gamma: 0.5
+  step_size: 6
+  beta1: 0.9
+  beta2: 0.99
+  amsgrad: True
+  savename: 'INSERT_NAME_HERE'
+  save_path: 'INSERT_PATH_HERE'
+
+Data:
+  sequence_length: 17
+  img_size: 128
+  dataset: 'DTDB'
+  texture: 'fire'
+  image_format: 'jpg'
+  aug: True
+  iter_train: 40
+  iter_eval: 5
+  iter_test: 5
+  data_path: 'INSERT_DATA_PATH_HERE'
+  Augmentation:
+    brightness: 0.3
+    contrast: 0.3
+    saturation: 0.3
+    hue: 0.15
+    prob_hflip: 0.5
+
+Logging:
+  entity: 'INSERT_WANDB_NAME'
+  project: "INSERT_PROJECT_NAME"
+  mode: 'online'
