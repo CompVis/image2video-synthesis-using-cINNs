@@ -1,5 +1,5 @@
 Decoder:
-  channel_factor: 48
+  channel_factor: 32
   z_dim: 64
   upsample_s: [2, 2]
   upsample_t: [2, 1]

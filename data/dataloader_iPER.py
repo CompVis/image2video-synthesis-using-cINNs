@@ -20,8 +20,7 @@ class Dataset(torch.utils.data.Dataset):
         ## Create list of videos and number of frames per video (train + eval)
         print(f"Setup dataloder {mode}")
         file = 'train.txt' if mode == 'train' else 'val.txt'
-        videos = open(self.data_path + file, 'r').read().split()
-        # videos = open('data/iPER/' + file, 'r').read().split()
+        videos = open('data/iPER/' + file, 'r').read().split()
         for i, vid in enumerate(videos):
             vid = vid.replace('/', '_')
             n_frames = len(glob.glob(self.data_path + vid + '/' + '*.png'))
@@ -67,7 +66,7 @@ class DatasetEvaluation(torch.utils.data.Dataset):
         self.img_size = img_size
 
         self.videos = []; self.num_frames = []
-        videos = open(path + 'val.txt', 'r').read().split()
+        videos = open('data/iPER/test.txt', 'r').read().split()
         for i, vid in enumerate(videos):
             vid = vid.replace('/', '_')
             n_frames = len(glob.glob(path + vid + '/' + '*.png'))

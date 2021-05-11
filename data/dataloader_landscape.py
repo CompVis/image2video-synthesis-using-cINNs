@@ -9,13 +9,13 @@ class Dataset(torch.utils.data.Dataset):
     def __init__(self, opt, mode):
 
         self.data_path = opt.Data['data_path']
-        self.prefix = 'sky_train' if mode == 'train' else 'sky_test'
+        self.prefix = 'sky_train' if mode != 'test' else 'sky_test'
 
         self.seq_length = opt.Data['sequence_length']
         self.do_aug = opt.Data['aug']
 
-        path = 'data/landscape/landscape_train.npy' if mode == 'train' else 'data/landscape/landscape_test.npy'
-        video_list = np.load(path)
+        path = f'data/landscape/{mode}.txt'
+        video_list = open(path).read().split()
         self.videos = []; self.num_frames = []
 
         for vid in video_list:
