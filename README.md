@@ -213,12 +213,12 @@ Thanks to everyone who makes their code and models available. In particular,
 ## BibTeX
 
 ```
-@misc{dorkenwald2021stochastic,
-      title={Stochastic Image-to-Video Synthesis using cINNs}, 
-      author={Michael Dorkenwald and Timo Milbich and Andreas Blattmann and Robin Rombach and Konstantinos G. Derpanis and Björn Ommer},
-      year={2021},
-      eprint={2105.04551},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@InProceedings{Dorkenwald_2021_CVPR,
+    author    = {Dorkenwald, Michael and Milbich, Timo and Blattmann, Andreas and Rombach, Robin and Derpanis, Konstantinos G. and Ommer, Bjorn},
+    title     = {Stochastic Image-to-Video Synthesis Using cINNs},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2021},
+    pages     = {3742-3753}
 }
 ```
