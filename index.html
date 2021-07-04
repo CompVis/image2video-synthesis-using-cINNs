@@ -85,19 +85,49 @@
               <section id="two" class="wrapper style2 special">
             <div class="container">
                 <header class="major">
-                    <h2>Approach</h2>
+                    <h2>Overview</h2>
                 </header>
 
-                <div class="container 75%">
-            <div class="image fit captioned align-left"
-                        style="margin-bottom:2em; box-shadow:0 0;
-                        text-align:justify">
-              <img src="paper/method.png" alt="" style="border:0px solid black"/>
-                Overview of our proposed framework. We learn an information preserving video representation \(z\) using our conditional generative model consisting of an encoder \(q_\phi\) as well as the corresponding decoder \(p_\psi\). The decoder consists of dedicated video residual blocks shown in right bottom. 
+                <div class="container 150%">
+
+                  <div class="image fit captioned align-just">
+                <a href="results/poster.png">
+                <img src="results/poster.png" alt="" />
+                </a>
+                Poster presentation of our work.
+<!--                 Overview of our proposed framework. We learn an information preserving video representation \(z\) using our conditional generative model consisting of an encoder \(q_\phi\) as well as the corresponding decoder \(p_\psi\). The decoder consists of dedicated video residual blocks shown in right bottom. 
 
                 After establishing the video representation, we learn a bijective transformation \(\mathcal{T}\) conditioned on the starting frame \(x_0\) and an optionally provided control factor \(\eta\).
-                During inference, we sample a residual \(\nu\), encapsulating the scene dynamics, from the prior distribution and use \(\mathcal{T}_\phi\) to obtain the video representation \(z\). Using our decoder we can then synthesize novel video sequences. Training and inference are indicated by the dotted and solid lines respectively.
-            </div>
+                During inference, we sample a residual \(\nu\), encapsulating the scene dynamics, from the prior distribution and use \(\mathcal{T}_\phi\) to obtain the video representation \(z\). Using our decoder we can then synthesize novel video sequences. Training and inference are indicated by the dotted and solid lines respectively. -->
+
+                <div class="row 150%">
+                <div class="6u 12u$(xsmall)">
+
+
+                <div class="image fit captioned align-just">
+                <div class="videocontainer">
+                <video controls class="videothing">
+                <source src="results/video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video>
+                </div>
+                Video presentation of our work.
+
+                </div>
+                </div>
+                <div class="6u$ 12u$(xsmall)">
+
+<!--                 <div class="image fit captioned align-just">
+                <div class="videocontainer">
+                <video controls class="videothing">
+                <source src="results/Landscape_diversity.mp4" type="video/mp4">
+ -->
+                <div class="image fit captioned align-just">
+                <a href="paper/method.png">
+                <img src="paper/method.png" alt="" />
+                </a>
+                Overview of our proposed framework. 
+                </div>
                 </div>
             </div>
         </section>
@@ -477,25 +507,25 @@ Behavior-Driven Synthesis of Human Dynamics
 <p align="justify" style="line-height: 1.0em; font-size:0.9em">
 Generating and representing human behavior are of major importance for various computer vision applications. Commonly, human video synthesis represents behavior as sequences of postures while directly predicting their likely progressions or merely changing the appearance of the depicted persons, thus not being able to exercise control over their actual behavior during the synthesis process. In contrast, controlled behavior synthesis and transfer across individuals requires a deep understanding of body dynamics and calls for a representation of behavior that is independent of appearance and also of specific postures. In this work, we present a model for human behavior synthesis which learns a dedicated representation of human dynamics independent of postures. Using this representation, we are able to change the behavior of a person depicted in an arbitrary posture, or to even directly transfer behavior observed in a given video sequence. To this end, we propose a conditional variational framework which explicitly disentangles posture from behavior. We demonstrate the effectiveness of our approach on this novel task, evaluating capturing, transferring, and sampling fine-grained, diverse behavior, both quantitatively and qualitatively.
 <!-- Insert here interactive video synthesis work from andy -->
-<!-- </div>
+</div>
 
 <div class="12u">
 <h6>
-<a href="https://compvis.github.io/behavior-driven-video-synthesis/">
-Behavior-Driven Synthesis of Human Dynamics
+<a href="https://compvis.github.io/interactive-image2video-synthesis//">
+ Understanding Object Dynamics for Interactive Image-To-Video Synthesis 
 </a>
 </h6>
 </div>
 <div class="3u 12u$(medium)">
 <div class="image fit align-center">
-<a href="https://compvis.github.io/behavior-driven-video-synthesis/">
-<img src="images/teaser_behavior.png" style="max-width:25em; margin:auto" />
+<a href="https://compvis.github.io/interactive-image2video-synthesis/">
+<img src="https://compvis.github.io/interactive-image2video-synthesis/images/first-page.png" style="max-width:25em; margin:auto" />
 </a>
 </div>
 </div>
 <div class="9u 12u$(medium)">
-<p align="justify" style="line-height: 1.0em; font-size:0.8em">
-Generating and representing human behavior are of major importance for various computer vision applications. Commonly, human video synthesis represents behavior as sequences of postures while directly predicting their likely progressions or merely changing the appearance of the depicted persons, thus not being able to exercise control over their actual behavior during the synthesis process. In contrast, controlled behavior synthesis and transfer across individuals requires a deep understanding of body dynamics and calls for a representation of behavior that is independent of appearance and also of specific postures. In this work, we present a model for human behavior synthesis which learns a dedicated representation of human dynamics independent of postures. Using this representation, we are able to change the behavior of a person depicted in an arbitrary posture, or to even directly transfer behavior observed in a given video sequence. To this end, we propose a conditional variational framework which explicitly disentangles posture from behavior. We demonstrate the effectiveness of our approach on this novel task, evaluating capturing, transferring, and sampling fine-grained, diverse behavior, both quantitatively and qualitatively. -->
+<p align="justify" style="line-height: 1.0em; font-size:0.9em">
+What would be the effect of locally poking a static scene? We present an approach that learns naturally-looking global articulations caused by a local manipulation at a pixel level. Training requires only videos of moving objects but no information of the underlying manipulation of the physical scene. Our generative model learns to infer natural object dynamics as a response to user interaction and learns about the interrelations between different object body regions. Given a static image of an object and a local poking of a pixel, the approach then predicts how the object would deform over time. In contrast to existing work on video prediction, we do not synthesize arbitrary realistic videos but enable local interactive control of the deformation. Our model is not restricted to particular object categories and can transfer dynamics onto novel unseen object instances. Extensive experiments on diverse objects demonstrate the effectiveness of our approach compared to common video prediction frameworks.
 </div>
 </div>
 </div>
