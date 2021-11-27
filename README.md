@@ -4,6 +4,8 @@ Official PyTorch implementation of Stochastic Image-to-Video Synthesis using cIN
 
 https://user-images.githubusercontent.com/24416143/117287893-2aef6d80-ae6b-11eb-8d6a-f0678426ff58.mp4
 
+<a href="https://replicate.com/mdork/image2video-synthesis-using-cinns"><img src="https://img.shields.io/static/v1?label=Replicate&message=Demo and Docker Image&color=blue"></a>
+
 ## [Arxiv](https://arxiv.org/abs/2105.04551) | [Project Page](https://compvis.github.io/image2video-synthesis-using-cINNs/) | [Supplemental](https://compvis.github.io/image2video-synthesis-using-cINNs/results/222_supp.zip) | [Pretrained Models](https://drive.google.com/drive/folders/12-PccC8jKz4UGpaE9GS0aOi23PHjJLzW?usp=sharing) | [BibTeX](#bibtex)
 [Michael Dorkenwald](https://mdork.github.io/),
 [Timo Milbich](https://timomilbich.github.io/),
